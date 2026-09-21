@@ -1094,3 +1094,43 @@ Le flux local devient déjà :
               ▼
            SLI / SLO
 
+
+
+Et tu peux maintenant tester le socle avec :
+
+./ci/quality.sh
+
+
+ou directement :
+
+./quality/ci/quality-gate.sh
+
+
+Le résultat attendu à ce stade est :
+
+==================================================
+        INTEGRATION-XTESTING QUALITY GATE
+==================================================
+
+[1/3] Structure + Metadata validation
+
+Application: ra2/network/RA2-NET-001
+STRUCTURE: PASS
+METADATA: PASS
+
+Application: rc2/network/RC2-NET-001
+STRUCTURE: PASS
+METADATA: PASS
+
+[2/3] Foundation contract
+Contract: PASS
+
+[3/3] Required quality definitions
+Quality definitions: PASS
+
+==================================================
+QUALITY GATE: PASS
+==================================================
+
+
+Partie 3/5 ajoutera la vraie chaîne CI/CD : workflow GitHub Actions, validation PR, unit tests, Docker build, security gate, artifacts et Quality Gate global.
